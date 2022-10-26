@@ -209,7 +209,8 @@ def start_httpd(addr):  # pragma: no cover
     """
     host, port = addr.split(':')
     logging.info('Starting HTTPD on {}:{}'.format(host, port))
-    prometheus_client.start_http_server(int(port), host)
+    #prometheus_client.start_http_server(int(port), host)
+    prometheus_client.start_http_server(int(port))
 
 
 def shutdown(signum, frame):  # pragma: no cover
